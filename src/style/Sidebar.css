@@ -1,0 +1,59 @@
+.Sidebar{
+  width: 210px;
+  height: 840px;
+  background: #944BBB;
+  color:white;
+}
+
+.Option{
+  color:white !important;
+  text-decoration: none !important;
+}
+
+.Drop_up{
+  overflow:hidden;
+  max-height:60px;
+  transition: max-height 0.5s;
+}
+
+.Drop_down{
+  overflow: hidden;
+  max-height: 240px;
+  transition: max-height 0.5s;
+}
+
+.icon_p{
+  width: 18px;
+  height: 18px;
+}
+
+#barra_l{
+  font-size:11px;
+}
+
+#setinha{
+  width: 10px;
+  height: 10px;
+}
+
+#title_side{
+  font-size: 24px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+#legenda{
+  line-height:21px;
+}
+
+#linha{
+  height: 0px;
+  width:97px;
+  margin-left:15%;
+
+  border: 1px solid #C78FFF;
+}
+
+.apagado{
+  color: #C78FFF;
+}

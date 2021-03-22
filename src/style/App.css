@@ -1,0 +1,36 @@
+body{
+  background-color: #E5E5E5;
+  font-family: Comfortaa;
+  font-style: normal;
+}
+
+.ciclavel{
+  cursor:pointer !important;
+}
+
+.text_16{
+  font-size:16px;
+}
+
+.aux_my80{
+  margin-bottom:80px;
+}
+
+.aux_my40{
+  margin-bottom:40px;
+}
+
+.aux_my25{
+  margin-bottom:25px;
+}
+
+.aux_mxl16{
+  margin-left: 12px;
+}
+
+.aux_mxr16{
+  margin-right: 16px;
+}
+
+
+

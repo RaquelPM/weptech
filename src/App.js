@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Sidebar from './components/Sidebar'
+import  Principal from './pages/principal'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-100 h-100 d-flex">
+        <BrowserRouter>
+            <Sidebar />
+            <Switch>
+                <Route path="/" exact={true} component={Principal}/>
+                <Route path="/teste" exact={true} component={Sidebar}/>
+            </Switch>
+        </BrowserRouter>
     </div>
   );
 }
-
 export default App;
