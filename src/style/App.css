@@ -4,24 +4,72 @@ body{
   font-style: normal;
 }
 
-.ciclavel{
-  cursor:pointer !important;
+.clicavel{
+  cursor:pointer;
+}
+
+.text_grey{
+  color:#4D4D4D;
+}
+
+.text_40{
+  font-size: 40px;
+}
+
+.text_32{
+  font-size: 32px;
+}
+
+.text_20{
+  font-size:20px;
 }
 
 .text_16{
   font-size:16px;
 }
 
+.aux_mxr95{
+  margin-right: 95px;
+}
+
+.aux_mxl95{
+  margin-left: 95px;
+}
+
 .aux_my80{
   margin-bottom:80px;
+}
+
+.aux_my60{
+ margin-bottom: 60px; 
+}
+
+.aux_my48{
+  margin-bottom: 48px;
 }
 
 .aux_my40{
   margin-bottom:40px;
 }
 
+.aux_my32{
+  margin-bottom: 32px;
+}
+
+.aux_mxl24{
+  margin-left:24px;
+}
+
+.aux_mxr24{
+  margin-right:24px;
+}
+
 .aux_my25{
   margin-bottom:25px;
+}
+
+.aux_mxr20{
+  margin-right:20px;
 }
 
 .aux_mxl16{
@@ -30,6 +78,10 @@ body{
 
 .aux_mxr16{
   margin-right: 16px;
+}
+
+.aux_my16{
+  margin-bottom: 16px;
 }
 
 
