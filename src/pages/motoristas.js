@@ -4,10 +4,24 @@ import '../style/App.css'
 import '../style/Pages.css'
 
 import Card from '../components/card_dados'
+import useMoto from '../hooks/useMoto'
 
 import { AiOutlineSearch } from 'react-icons/ai'
 
 function Motoristas(){
+    const [motoristas, updateMotoristas] = useMoto();
+
+    const listMoto = motoristas.map((motorista)=>   
+        <Card 
+            key={motorista.id}
+            id={motorista.id}
+            nome={motorista.nome} 
+            telefone={motorista.telefone} 
+            status={motorista.status}
+            update={updateMotoristas}
+        />
+    )
+
     return(
         <div class="w-100 d-flex flex-column align-items-center">
             <div className="w-100 d-flex justify-content-end">
@@ -23,12 +37,7 @@ function Motoristas(){
                 </div>
                 <button className="btn_p my-1">CVC</button>
             </div> 
-            <Card 
-                nome="Adson Justino Silva Araújo" 
-                input1="Adson Justino Silva Araújo" 
-                input2="83 987745514" 
-                input3="Ativo"
-            />
+            {listMoto}
         </div>
     )
 }

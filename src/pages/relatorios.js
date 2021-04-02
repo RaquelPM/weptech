@@ -4,10 +4,20 @@ import '../style/App.css'
 import '../style/Pages.css'
 
 import Card from '../components/card_dados'
+import { API_relatorios } from '../consts'
 
 import { AiOutlineSearch } from 'react-icons/ai'
 
-function Motoristas(){
+function Relatorios(){
+    const listCards = API_relatorios.map((relatorio)=>
+        <Card 
+            relatorio 
+            nome={relatorio.motorista}
+            viagens={relatorio.viagens}
+            valor={relatorio.valor}
+            receber={relatorio.receber} 
+        />
+    )
     return(
         <div class="w-100 d-flex flex-column align-items-center">
             <div className="w-100 d-flex justify-content-end">
@@ -23,15 +33,9 @@ function Motoristas(){
                 </div>
                 <button className="btn_p my-1">PDF</button>
             </div> 
-            <Card 
-                relatorio 
-                nome="Adson Justino da Silva" 
-                input1="3000" 
-                input2="R$  10.000,00" 
-                input3="R$ 2000,00" 
-            />
+            {listCards}
         </div>
     )
 }
 
-export default Motoristas
+export default Relatorios

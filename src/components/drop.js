@@ -13,7 +13,7 @@ function Drop(props){
                 { !drop && <AiOutlineCaretDown id="setinha" className={`mt-1 ml-2 ${drop && 'apagado'}`} /> }
                 { drop && <AiOutlineCaretUp id="setinha" className={`mt-1 ml-2 ${drop && 'apagado'}`}/>  }
             </div>
-            <div className="d-flex flex-column">
+            <div className="d-flex flex-column" onClick={props.sidebar}>
                 {props.top}
                 {props.center}
                 {props.bottom}

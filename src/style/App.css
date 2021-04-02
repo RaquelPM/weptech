@@ -8,8 +8,25 @@ body{
   cursor:pointer;
 }
 
+.w90{
+  width: 90%;
+}
+
+.w60{
+  width: 60%;
+}
+
+.w40{
+  width: 40%;
+}
+
+
 .text_grey{
   color:#4D4D4D;
+}
+
+.bold{
+  font-weight: bold;
 }
 
 .text_40{
@@ -38,6 +55,10 @@ body{
 
 .aux_my80{
   margin-bottom:80px;
+}
+
+.aux_mxr72{
+  margin-right:72px;
 }
 
 .aux_my60{

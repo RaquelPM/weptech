@@ -5,6 +5,16 @@
     border-radius: 20px;
     color:white;
     border-width: 0px;
+    outline:none;
+}
+
+.line_18{
+    line-height: 18px;
+}
+
+.icon_title,.icon_sidetop{
+    width: 25px;
+    height: 25px;
 }
 
 .title_div{
@@ -17,11 +27,13 @@
 }
 
 .input_dark{
-    height: 55px;
+    height: 60px;
     background: #4D4D4D;
     box-shadow: 0px 0.86386px 3.45544px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     color:white;
+    outline:none;
+    border:0px;
 }
 
 .search_div{
@@ -38,29 +50,39 @@
     outline:none;
 }
 
-.card_dados{
+.card, .caard{
     background: #FFFFFF;
     box-shadow: 0px 0.86386px 3.45544px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     line-height: 0px;
+    z-index: 2;
+}
+
+.caard{
+    height: 61px;
+    text-decoration: none !important;
 }
 
 .editar{
     background: #D2D2D2;
-    border-radius: 10px;
-    height: 50px;
-    border:0px;
-    outline:none !important;
 }
 
 .desativar{
     background: #FF3131;
+}
+
+.adicionar{
+    background: #00B929;
+    width: 234px;
+}
+
+.finalizar, .desativar, .editar, .adicionar{
+    min-width: 110px;
     border-radius: 10px;
     height: 50px;
     border:0px;
     outline:none !important;
 }
-
 #linhav{
     width: 0px;
     height: 79px;
@@ -81,4 +103,11 @@
     overflow: hidden;
     max-height: 550px;
     transition: max-height 1s;
+}
+
+@media screen and (min-width:900px) {
+    .icon_sidetop{
+        height: 0px;
+        width: 0px;
+    }
 }

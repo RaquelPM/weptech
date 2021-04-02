@@ -1,8 +1,38 @@
 .Sidebar{
-  min-width: 210px;
+  position:fixed;
+  top:0;
+  bottom:0;
   min-height: 100vh;
   background: #944BBB;
   color:white;
+  z-index:10;
+}
+
+.Sidebar_show{
+  overflow: hidden;
+  max-width: 210px;
+  transition: max-width 0.5s;
+}
+
+.Sidebar_shadow{
+  overflow: hidden;
+  max-width: 0px;
+  transition: max-width 0.5s;
+}
+
+.Sidetop{
+  height: 60px;
+  background: #944BBB;
+  color:white;
+  z-index:3;
+}
+
+.sombra{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 4;
 }
 
 .Option{
@@ -25,6 +55,7 @@
 .icon_p{
   width: 18px;
   height: 18px;
+  cursor:pointer;
 }
 
 #barra_l{
@@ -37,6 +68,10 @@
 }
 
 #title_side{
+  font-size: 0px;
+}
+
+#title_top{
   font-size: 24px;
   font-weight: 300;
   font-style: italic;
@@ -56,5 +91,39 @@
 
 .apagado{
   color: #C78FFF;
+}
+
+@media screen and (min-width:900px) {
+  .Sidetop{
+    height: 0px;
+    background: #944BBB;
+    color:none;
+  }
+
+  .Sidebar{
+    position:relative;
+    min-width: 210px;
+  }
+
+  .Sidebar_show, .Sidebar_shadow{
+    overflow: hidden;
+    max-width: 210px;
+    transition: max-width 0.5s;
+  }
+
+  #title_top{
+    font-size: 0px;
+  }
+
+  #title_side{
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .sombra{
+    width: 0vw;
+    height: 0vh;
+  }
 }
 
