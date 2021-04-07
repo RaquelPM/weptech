@@ -28,7 +28,7 @@ function Sidebar() {
           <p id="title_top" className="mt-2 ml-5">Weptech</p>
         </div>
       </div>
-      { sidebar && <div className="sombra"/>}
+      { sidebar && <div onClick={()=>setSidebar(!sidebar)} className="sombra"/>}
       <div className={`Sidebar ${sidebar && 'Sidebar_show'} ${!sidebar && 'Sidebar_shadow'} h-100 d-flex align-items-center flex-column`}>
         <p id="title_side" className="aux_my80 mt-3 mr-1" >Weptech</p>
         <div className="d-flex w-100 align-items-start ml-5 flex-column">

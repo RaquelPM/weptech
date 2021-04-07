@@ -19,11 +19,11 @@ function Viagens(){
     )
 
     return(
-        <div class="w-100 d-flex flex-column align-items-center">
+        <div class="w-100 d-flex flex-column align-items-center page">
             <div className="w-100 d-flex justify-content-end">
-                <button className="btn_p mt-4 mr-5 text_16">SAIR</button>
+                <button className="btn_p mt-4 mr-4 text_16">SAIR</button>
             </div>
-            <div className="title_div d-flex w-75 mt-4 aux_my60">
+            <div className="title_div d-flex w-75 mt-4 aux_my60 line_35_cell">
                 <p className="text_32 text_grey">Viagens em andamento</p>
             </div>
             {listCards}

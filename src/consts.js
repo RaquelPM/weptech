@@ -1,27 +1,43 @@
 export const API_config = [
     {
-        id:1,
+        id:0,
         nome:"Honório Bicalho",
-        embarques:{
-            embarque1:{nome:"local1", valor:"R$ 200"},
-            embarque2:{nome:"local2", valor:"R$ 200"},
-        }
+        pontos:[
+            {
+                id:0,
+                nome:"Rua Joanas Morais Lordão",
+                tipo:"dominante",
+                valor:"200",
+                horarios:["11:00", "12:00", "23:00"]
+            },
+            {
+                id:1,
+                nome:"Rua Professora Mária Ester",
+                tipo:"secundario",
+                valor:"150",
+                horarios:["11:00", "23:00"]
+            },
+        ]
     },
     {
-        id:2,
+        id:1,
         nome:"Centro de Nova Lima",
-        embarques:{
-            embarque1:{nome:"local11", valor:"R$ 500"},
-            embarque2:{nome:"local22", valor:"R$ 1000"},
-        }
-    },
-    {
-        id:3,
-        nome:"Centro de Lima Nova",
-        embarques:{
-            embarque1:{nome:"local111", valor:"R$ 300"},
-            embarque2:{nome:"local222", valor:"R$ 500"},
-        }
+        pontos:[
+            {
+                id:0,
+                nome:"Rua Edinho Silva Pontes",
+                tipo:"secundario",
+                valor:"300",
+                horarios:["11:00"]
+            },
+            {
+                id:1,
+                nome:"Rua Vasco da Gama Ladeira",
+                tipo:"dominante",
+                valor:"350",
+                horarios:["23:00"]
+            },
+        ]
     },
 ];
 

@@ -21,7 +21,7 @@ function App() {
                 <Route path="/relatorios" exact={true} component={Relatórios}/>
                 <Route path="/viagens/andamento" exact={true} component={Viagens_andamento}/>
                 <Route path="/configurações" exact={true} component={Config_prin}/>
-                <Route path="/configurações/bairros" exact={true} component={Config}/>
+                <Route path="/configurações/bairro" exact={true} component={Config}/>
             </Switch>
         </BrowserRouter>
     </div>

@@ -2,26 +2,19 @@ import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { API_config } from '../consts'
 
-const useConfig = ()=>{
+const useConfig = () =>{
 
     const location = useLocation();
-
     const [bairro] = useState(API_config[location.state])
 
-   // function updateEmbarques(embarque, name, valor){
-        //API[location.state].embarques[embarque].nome = name;
-       // API[location.state].embarques[embarque].valor = valor;
-   // }
+    function attPonto(id_ponto, tipo, nome, valor, horarios){
+        bairro.pontos[id_ponto].nome=  nome;
+        bairro.pontos[id_ponto].tipo= tipo;
+        bairro.pontos[id_ponto].valor= valor;
+        bairro.pontos[id_ponto].horarios= horarios;
+    }
 
-    //function addEmbarque(embarque,name, valor){
-        //API[location.state].embarques['embarque' + embarque] = {nome:name, valor:valor}
-    //}
-
-    //function delEmbarque(embarque){
-       //delete API[location.state].embarques[embarque]
-    //}
-
-    return[bairro]
+    return[bairro, attPonto]
 }
 
 export default useConfig

@@ -28,9 +28,9 @@
 }
 
 .sombra{
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
+  position: fixed;
+  width: 110vw;
+  height: 110vh;
   background: rgba(0, 0, 0, 0.3);
   z-index: 4;
 }
@@ -53,9 +53,13 @@
 }
 
 .icon_p{
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   cursor:pointer;
+}
+
+.apagado{
+  color: #C78FFF;
 }
 
 #barra_l{
@@ -89,10 +93,6 @@
   border: 1px solid #C78FFF;
 }
 
-.apagado{
-  color: #C78FFF;
-}
-
 @media screen and (min-width:900px) {
   .Sidetop{
     height: 0px;
@@ -111,6 +111,11 @@
     transition: max-width 0.5s;
   }
 
+  .sombra{
+    width: 0vw;
+    height: 0vh;
+  }
+
   #title_top{
     font-size: 0px;
   }
@@ -121,9 +126,5 @@
     font-style: italic;
   }
 
-  .sombra{
-    width: 0vw;
-    height: 0vh;
-  }
 }
 

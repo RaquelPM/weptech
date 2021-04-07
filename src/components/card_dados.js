@@ -30,8 +30,8 @@ function Card(props){
                     { !props.relatorio && <label className="text_16 text_grey mb-3 ml-2" >Nome</label>}
                     { props.relatorio && <label className="text_16 text_grey mb-3 ml-2" >Viagens Realizadas</label>}
 
-                    { !props.relatorio && <input type="text" value={nome} onChange={(e)=>{setNome(e.target.value)}} disabled={!edit} className="input_dark px-4 w-100 aux_my16"/>}
-                    { props.relatorio && <input type="text" value={props.viagens} disabled={!edit} className="input_dark px-4 w-100 aux_my16"/>}
+                    { !props.relatorio && <input type="text" value={nome} maxLength="70" onChange={(e)=>{setNome(e.target.value)}} disabled={!edit} className="input_dark px-4 w-100 aux_my16"/>}
+                    { props.relatorio && <input type="text" value={props.viagens} disabled className="input_dark px-4 w-100 aux_my16"/>}
 
                     { !props.relatorio && <label className="text_16 text_grey mb-3 ml-2" >Telefone</label>}
                     { props.relatorio && <label className="text_16 text_grey mb-3 ml-2" >Valor das corridas</label>}
@@ -46,9 +46,9 @@ function Card(props){
 
                     {
                         !props.relatorio &&
-                        <div className="d-flex w-100 justify-content-center">
-                            <button onClick={()=>setEdit(!edit)} className="editar aux_mxr24 text_16 text_grey w-25">{!edit && 'Editar'} { edit && 'Salvar'}</button>
-                            <button onClick={(e)=>{e.preventDefault()}} className="desativar aux_my16 text_16 text-white w-25">DESATIVAR</button>
+                        <div className="d-flex w-100 justify-content-center div_btns aux_my16 align-items-center">
+                            <button onClick={()=>setEdit(!edit)} className="editar text_16 text_grey">{!edit && 'Editar'} { edit && 'Salvar'}</button>
+                            <button onClick={(e)=>{e.preventDefault()}} className="desativar text_16 text-white">DESATIVAR</button>
                         </div>
                     }
                 </form>

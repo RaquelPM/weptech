@@ -8,8 +8,20 @@ body{
   cursor:pointer;
 }
 
+.line_18, .line_18_cell{
+  line-height: 18px !important;
+}
+
+.line_30_to_18{
+  line-height: 30px;
+}
+
+.line_35_cell{
+  line-height: 35px !important;
+}
+
 .w90{
-  width: 90%;
+  width: 90% !important;
 }
 
 .w60{
@@ -19,7 +31,6 @@ body{
 .w40{
   width: 40%;
 }
-
 
 .text_grey{
   color:#4D4D4D;
@@ -65,6 +76,14 @@ body{
  margin-bottom: 60px; 
 }
 
+.aux_mxr57{
+  margin-right: 57px;
+}
+
+.aux_mxl57{
+  margin-left: 57px;
+}
+
 .aux_my48{
   margin-bottom: 48px;
 }
@@ -73,8 +92,12 @@ body{
   margin-bottom:40px;
 }
 
+.aux_mxr32{
+  margin-right:32px;
+}
+
 .aux_my32{
-  margin-bottom: 32px;
+  margin-bottom: 32px !important;
 }
 
 .aux_mxl24{
@@ -105,5 +128,14 @@ body{
   margin-bottom: 16px;
 }
 
+@media screen and (min-width:500px) {
+.line_35_cell, .line_18_cell{
+    line-height: 0px !important;
+}
+
+.line_30_to_18{
+    line-height: 18px;
+}
+}
 
 
