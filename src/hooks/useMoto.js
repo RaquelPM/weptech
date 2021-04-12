@@ -8,9 +8,14 @@ const useMoto = ()=>{
     function updateMotoristas(id, name, telefone){
         API_motoristas[id].nome = name;
         API_motoristas[id].telefone = telefone;
+        alert('Salvo!')
     }
 
-    return[motoristas,updateMotoristas]
+    function delMotoristas(id){
+        API_motoristas.splice(id, 1);
+    }
+
+    return[motoristas,updateMotoristas, delMotoristas]
 }
 
 export default useMoto

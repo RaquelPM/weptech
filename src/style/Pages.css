@@ -28,6 +28,7 @@
     background: #FFFFFF;
     box-shadow: 0px 0.86386px 3.45544px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
+    width:90%;
 }
 
 .search{
@@ -59,6 +60,22 @@
     border:0px;
 }
 
+.div_select{
+    overflow: hidden;
+    border-radius: 20px;
+    height: 60px;
+}
+
+.select{
+    border:solid 10px  #4D4D4D;
+    opacity: 1;
+}
+
+.option{
+    background: white;
+    color: #4D4D4D;
+}
+
 .radio{
     all:unset;
     width: 16px;
@@ -68,9 +85,11 @@
 }
 
 .input_horario{
-    max-width:90px;
-    font-size:18px;
-    height: 50px;
+    max-width:95px;
+    font-size:16px;
+    height: 60px;
+    line-height: 18px;
+    text-align:center;
 }
 
 .btn_horario{
@@ -103,7 +122,7 @@
 }
 
 .title_div{
-    margin-right: 10%;
+    margin-right: 5%;
     border: 0.5px solid #FFFFFF;
     border-left: 0px;
     border-top:0px;
@@ -115,7 +134,7 @@
 
 .title_div_config{
     align-items: start;
-    margin-right: 0%;
+    margin-right: -5%;
     min-width: 400px;
     max-height: 85px;
 }
@@ -134,7 +153,7 @@
     box-shadow: 0px 0.86386px 3.45544px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     line-height: 0px;
-    z-index: 2;
+    z-index: 1;
 }
 
 .caard{
@@ -166,7 +185,12 @@
 }
 
 .input_viagens{
-    margin-right: 24px !important;
+    width: 90%;
+    margin-left:0px;
+}
+
+.point_viagens{
+    width: 90%;
 }
 
 #linhav{
@@ -177,6 +201,27 @@
 #title_card_prin{
     max-width: 0px;
     font-size: 0px;
+}
+
+#modal_div{
+    margin-left:0%;
+    z-index: 3;
+}
+
+#modal_sombra{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#modal{
+    max-width: 548px;
+    max-height: 386px;
+    min-height: 285px;
+    min-width: 363px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0.86386px 3.45544px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    z-index: 4;
 }
 
 .Card_up{
@@ -197,16 +242,26 @@
     transition: max-height 1.5s;
 }
 
+.fade_show{
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.5s;
+    width: 100vw;
+    height: 100vh;
+}
+
+.fade_cover{
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
+    width: 0vw;
+    height: 0vh;
+}
+
 @media screen and (min-width:500px) {
     .Card_up_viagens{
         overflow:hidden;
         max-height:50px;
-        transition: max-height 1.2s;
-    }
-
-    .Card_down{
-        overflow: hidden;
-        max-height: 490px;
         transition: max-height 1.2s;
     }
 
@@ -224,11 +279,17 @@
     .title_div{
         margin-right: 15%;
     }
-
-    
+ 
 }
 
 @media screen and (min-width:900px) {
+
+    .Card_down{
+        overflow: hidden;
+        max-height: 490px;
+        transition: max-height 1.2s;
+    }
+
     .icon_sidetop{
         height: 0px;
         width: 0px;
@@ -284,14 +345,22 @@
         flex-direction: row;
     }
 
-    .editar, .finalizar, .desativar, .adicionar{
+    .editar, .finalizar, .adicionar{
         margin-bottom: 0px;
         margin-right: 24px;
     }
 
+    .desativar{
+        margin-bottom:0px;
+    }
+
     .input_viagens{
-        width: 60%;
-        margin-right: 0px;
+        max-width: 50%;
+        margin-left: 24px;
+    }
+
+    .point_viagens{
+        width: 50%;
     }
 
     .title_div_config{
@@ -312,5 +381,9 @@
 
     .title_viagens{
         margin-top: 15px;
+    }
+
+    #modal_div{
+        margin-left: 5%;
     }
 }

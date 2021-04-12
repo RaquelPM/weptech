@@ -94,19 +94,19 @@ export const API_viagens = [
         motorista:"Raquel Patrício Moraes",
         pontos:[
             { id:0, nome:"Gabriel Luciano - 31985620561 - Praça Da Estação - Praça Do Mineiro", status:true},
-            { id:1, nome:"Gabriel Luciano - 31985620561 - Praça Da Estação - Praça Do Mineiro", status:true},
-            { id:2, nome:"Gabriel Luciano - 31985620561 - Praça Da Estação - Praça Do Mineiro", status:false},
+            { id:1, nome:"Paulo Eduardo - 31985620561 - Praça Da Estação - Praça Do Mineiro", status:true},
+            { id:2, nome:"Lima Barreto - 31985620561 - Praça Da Estação - Praça Do Mineiro", status:false},
         ]
     },
     {
-        id:0,
+        id:1,
         embarque:"Bicalho Honório",
         desembarque:"Centro de Lima Nova",
         motorista:"Cleiton Nascimento",
         pontos:[
-            { id:0, nome:"Gabriel Luciano - 31985620561 - Praça Da Estação - Praça Do Mineiro", status:true},
-            { id:1, nome:"Gabriel Luciano - 31985620561 - Praça Da Estação - Praça Do Mineiro", status:false},
-            { id:2, nome:"Gabriel Luciano - 31985620561 - Praça Da Estação - Praça Do Mineiro", status:false},
+            { id:0, nome:"Allan Ribeiro - 31985620561 - Praça Da Estação - Praça Do Mineiro", status:true},
+            { id:1, nome:"Adisson Adson Tejo - 31985620561 - Praça Da Estação - Praça Do Mineiro", status:false},
+            { id:2, nome:"Cleiton Nascimento - 31985620561 - Praça Da Estação - Praça Do Mineiro", status:false},
         ]
     }
 ]

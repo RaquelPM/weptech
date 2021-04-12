@@ -1,4 +1,4 @@
-import  React, { useEffect } from 'react'
+import  React, { useState } from 'react'
 import { useHistory } from "react-router-dom";
 
 import '../style/App.css'
@@ -7,6 +7,7 @@ import '../style/Pages.css'
 import { FiArrowRightCircle } from 'react-icons/fi'
 
 import Card from '../components/card_config'
+import Modal from '../components/modal'
 
 import useConfig from '../hooks/useConfig'
 
@@ -14,25 +15,25 @@ function Config(){
 
     const history = useHistory()
 
-    const [bairro, attPonto] = useConfig();
+    const [bairro, attPonto, delPonto] = useConfig();
+    const [modal, setModal] = useState(false)
 
     const listCards = bairro.pontos.map((ponto)=>
         <Card 
+            key={ponto.id}
             ponto={ponto.id + 1}
             nome={ponto.nome}
             valor={ponto.valor}
             horarios={ponto.horarios}
             tipo={ponto.tipo}
             attPonto={attPonto}
+            setModal={setModal}
         />
     )
-
-    useEffect(() => {
-        console.log(bairro)
-      });
     
     return(
         <div className="w-100 d-flex flex-column align-items-center page">
+            <Modal modal={modal} setModal={setModal} function={delPonto}/>
             <div className="w-100 d-flex justify-content-end">
                 <button className="btn_p mt-4 mr-4 text_16">SAIR</button>
             </div>

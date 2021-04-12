@@ -8,13 +8,21 @@ const useConfig = () =>{
     const [bairro] = useState(API_config[location.state])
 
     function attPonto(id_ponto, tipo, nome, valor, horarios){
-        bairro.pontos[id_ponto].nome=  nome;
-        bairro.pontos[id_ponto].tipo= tipo;
-        bairro.pontos[id_ponto].valor= valor;
-        bairro.pontos[id_ponto].horarios= horarios;
+        if(horarios.length === 0) alert('É necessário se ter algum horário')
+        else{
+            bairro.pontos[id_ponto].nome=  nome;
+            bairro.pontos[id_ponto].tipo= tipo;
+            bairro.pontos[id_ponto].valor= valor;
+            bairro.pontos[id_ponto].horarios= horarios;
+            alert('Salvo!')
+        }
     }
 
-    return[bairro, attPonto]
+    function delPonto(id){
+        bairro.pontos.splice(id, 1);
+    }
+
+    return[bairro, attPonto, delPonto]
 }
 
 export default useConfig

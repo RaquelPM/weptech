@@ -8,9 +8,14 @@ const usePassa = ()=>{
     function updatePassageiro(id, nome, telefone){
         API_passageiros[id].nome = nome;
         API_passageiros[id].telefone = telefone;
+        alert('Salvo!')
     }
 
-    return[passageiros, updatePassageiro]
+    function delPassageiros(id){
+        API_passageiros.splice(id, 1);
+    }
+
+    return[passageiros, updatePassageiro, delPassageiros]
 }
 
 export default usePassa

@@ -8,11 +8,15 @@ body{
   cursor:pointer;
 }
 
+.z10{
+  z-index:10 !important;
+}
+
 .line_18, .line_18_cell{
   line-height: 18px !important;
 }
 
-.line_30_to_18{
+.line_30_to_18, .line_30{
   line-height: 30px;
 }
 
@@ -30,6 +34,10 @@ body{
 
 .w40{
   width: 40%;
+}
+
+.w545{
+  width: 545px;
 }
 
 .text_grey{
@@ -76,6 +84,10 @@ body{
  margin-bottom: 60px; 
 }
 
+.aux_myt60{
+  margin-top: 60px; 
+ }
+
 .aux_mxr57{
   margin-right: 57px;
 }
@@ -93,7 +105,11 @@ body{
 }
 
 .aux_mxr32{
-  margin-right:32px;
+  margin-right:32px !important;
+}
+
+.aux_mxl32{
+  margin-left:32px !important;
 }
 
 .aux_my32{
