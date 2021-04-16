@@ -7,14 +7,15 @@ function Card(props){
 
     const [nome, setNome] = useState(props.nome);
     const [telefone, setTelefone] = useState(props.telefone);
+    const [status, setStatus] = useState(props.status)
 
     const [card, setCard] = useState(false);
     const [edit, setEdit] = useState(false);
 
-    function submit(id, name, telefone){
+    function submit(id, name, telefone, status){
         if(!edit){
             if(name && telefone){
-                props.update(id,name,telefone);
+                props.update(id,name,telefone, status);
                 console.log(id, name, telefone);
             }
             else{alert('Está faltando informações');setEdit(true)}
@@ -29,7 +30,7 @@ function Card(props){
                 <p class="text_16 text_grey mt-3">{nome}</p>
             </div>
             <div className="d-flex flex-column align-items-start w-75">
-                <form onSubmit={(e)=>{e.preventDefault(); submit(props.id, nome, telefone)}}>
+                <form onSubmit={(e)=>{e.preventDefault(); submit(props.id, nome, telefone, status)}} className="w-100">
                     { !props.relatorio && <label className="text_16 text_grey mb-3 ml-2" >Nome</label>}
                     { props.relatorio && <label className="text_16 text_grey mb-3 ml-2" >Viagens Realizadas</label>}
 
@@ -45,7 +46,16 @@ function Card(props){
                     { !props.relatorio && <label className="text_16 text_grey mb-3 ml-2" >Status</label>}
                     { props.relatorio && <label className="text_16 text_grey mb-3 ml-2" >A receber</label>}
 
-                    <input type="text" value={props.status || props.receber} disabled className="input_dark px-4 w-100 aux_my16"/>
+                    { !props.relatorio && 
+                        <div className="div_select aux_my16">
+                            <select name="radio" disabled={!edit} className={`${!edit && 'w110'} ${edit && 'w-100'} input_dark select pl-2`} value={status} onChange={(e)=>{setStatus(e.target.value)}}>
+                                <option value="Ativo" className="option">Ativo</option>
+                                <option value="Desativo" className="option">Desativo</option>
+                            </select>
+                        </div>
+                    }
+
+                    { props.relatorio && <input type="text" value={props.receber} disabled className="input_dark px-4 w-100 aux_my16"/>}
 
                     {
                         !props.relatorio &&

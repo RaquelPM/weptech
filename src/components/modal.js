@@ -10,7 +10,7 @@ function Modal(props){
                             { props.viagens && <p className="w-75 text-center aux_my60 aux_myt60">Você tem certeza?</p>}
                             { !props.viagens && <p className="w-75 text-center aux_my60 aux_myt60">Você tem certeza que deseja excluir?</p>}
                             <div className="d-flex div_btns aux_my32">
-                                <button  onClick={()=>{props.function(localStorage.getItem('index'));props.setModal(false)}} className="editar text_16">Sim</button>
+                                <button  onClick={()=>{props.function(parseInt(localStorage.getItem('index')));props.setModal(false)}} className="editar text_16">Sim</button>
                                 <button  onClick={()=> props.setModal(false)} className="desativar text_16 text-white">Não</button>
                             </div>
                         </div>

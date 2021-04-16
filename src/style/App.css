@@ -24,6 +24,10 @@ body{
   line-height: 35px !important;
 }
 
+.w110{
+  width: 110%;
+}
+
 .w90{
   width: 90% !important;
 }

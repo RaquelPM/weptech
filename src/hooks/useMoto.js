@@ -5,14 +5,20 @@ const useMoto = ()=>{
 
     const [motoristas] = useState(API_motoristas)
 
-    function updateMotoristas(id, name, telefone){
+    function updateMotoristas(id, name, telefone, status){
         API_motoristas[id].nome = name;
         API_motoristas[id].telefone = telefone;
+        API_motoristas[id].status =  status
         alert('Salvo!')
     }
 
     function delMotoristas(id){
-        API_motoristas.splice(id, 1);
+        API_motoristas.map((motorista)=>{
+            if(motorista.id === id){
+                API_motoristas.splice(API_motoristas.indexOf(motorista),1);
+            }
+            return localStorage.getItem('index')
+        })
     }
 
     return[motoristas,updateMotoristas, delMotoristas]

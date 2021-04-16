@@ -11,7 +11,12 @@ const useViagens = ()=>{
     }
 
     function delORfimViagem(id){
-        API_viagens.splice(id,1);
+        API_viagens.map((viagem)=>{
+            if(viagem.id === id){
+                API_viagens.splice(API_viagens.indexOf(viagem),1);
+            }
+            return localStorage.getItem('index')
+        })
     }
 
     return[viagens,updateMotorista, delORfimViagem]

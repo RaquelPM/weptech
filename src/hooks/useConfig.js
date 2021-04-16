@@ -19,7 +19,12 @@ const useConfig = () =>{
     }
 
     function delPonto(id){
-        bairro.pontos.splice(id, 1);
+        bairro.pontos.map((ponto)=>{
+            if(ponto.id === id){
+                bairro.pontos.splice(bairro.pontos.indexOf(ponto),1);
+            }
+            return localStorage.getItem('index')
+        })
     }
 
     return[bairro, attPonto, delPonto]
