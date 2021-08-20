@@ -7,13 +7,13 @@ export const API_config = [
                 id:0,
                 nome:"Rua Joanas Morais Lordão",
                 tipo:"dominante",
-                valor:"200",
+                referencia:"Escola são josé",
                 horarios:["11:00", "12:00", "23:00"]
             },
             {
                 id:1,
                 nome:"Rua Professora Mária Ester",
-                tipo:"secundario",
+                referencia:"Escola josé são",
                 valor:"150",
                 horarios:["11:00", "23:00"]
             },
@@ -27,19 +27,37 @@ export const API_config = [
                 id:0,
                 nome:"Rua Edinho Silva Pontes",
                 tipo:"secundario",
-                valor:"300",
+                referencia:"Escola são josefina",
                 horarios:["11:00"]
             },
             {
                 id:1,
                 nome:"Rua Vasco da Gama Ladeira",
                 tipo:"dominante",
-                valor:"350",
+                referencia:"Escola josefina são",
                 horarios:["23:00"]
             },
         ]
     },
 ];
+
+export const API_config_rotas = [
+    {
+        id:0,
+        bairro1:'Honório Bicalho',
+        bairro2:'Bicalho Honório',
+        price:'R$ 100,00',
+        tempo:"11:30",
+    },
+
+    {
+        id:1,
+        bairro1:'Funcionários II',
+        bairro2:'Bessa',
+        price:'R$ 400,00',
+        tempo:"11:50",
+    },
+]
 
 export const API_passageiros = [
     {
@@ -109,4 +127,91 @@ export const API_viagens = [
             { id:2, nome:"Cleiton Nascimento - 31985620561 - Praça Da Estação - Praça Do Mineiro", status:false},
         ]
     }
+]
+
+export const API_financeiro_apagar = [
+    {
+        período:'01 / 11/ 2020',
+        motorista:'Raquel Patrício Moraes',
+        telefone:'839877455014',
+        valor:'R$ 100,00',
+        desconto:'-',
+        total:'R$ 100,00',
+        status:'A pagar'
+    },
+    {
+        período:'01 / 12/ 2020',
+        motorista:'Cleitom Nascimento',
+        telefone:'839871516014',
+        valor:'R$ 1000,00',
+        desconto:'R$ 200,00',
+        total:'R$ 800,00',
+        status:'A pagar'
+    },
+    {
+        período:'12 / 01/ 2021',
+        motorista:'Raquel Patrício Moraes',
+        telefone:'839877455014',
+        valor:'R$ 500,00',
+        desconto:'-',
+        total:'R$ 500,00',
+        status:'A pagar'
+    },
+    {
+        período:'01 / 08/ 2021',
+        motorista:'Cleitom Nascimento',
+        telefone:'839877455014',
+        valor:'R$ 700,00',
+        desconto:'R$ 100,00',
+        total:'R$ 600,00',
+        status:'A pagar'
+    },
+]
+
+export const API_financeiro_pago = [
+    {
+        período:'01 / 12/ 2020',
+        motorista:'Cleitom Nascimento',
+        telefone:'839871516014',
+        valor:'R$ 1000,00',
+        desconto:'R$ 200,00',
+        total:'R$ 800,00',
+        status:'Pago'
+    },
+    {
+        período:'01 / 08/ 2021',
+        motorista:'Cleitom Nascimento',
+        telefone:'839877455014',
+        valor:'R$ 700,00',
+        desconto:'R$ 100,00',
+        total:'R$ 600,00',
+        status:'Pago'
+    },
+    {
+        período:'12 / 01/ 2021',
+        motorista:'Raquel Patrício Moraes',
+        telefone:'839877455014',
+        valor:'R$ 500,00',
+        desconto:'-',
+        total:'R$ 500,00',
+        status:'Pago'
+    },
+    {
+        período:'01 / 11/ 2020',
+        motorista:'Raquel Patrício Moraes',
+        telefone:'839877455014',
+        valor:'R$ 100,00',
+        desconto:'-',
+        total:'R$ 100,00',
+        status:'Pago'
+    },
+    {
+        período:'06 / 11/ 2020',
+        motorista:'Raquel Patrício Moraes',
+        telefone:'839877455014',
+        valor:'R$ 800,00',
+        desconto:'-',
+        total:'R$ 800,00',
+        status:'Pago'
+    },
 ]

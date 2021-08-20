@@ -9,7 +9,7 @@ function Drop(props){
         <div onClick={()=>setDrope(!drop)} className={`w-100 d-flex flex-column ${drop && 'Drop_down'} ${!drop && 'Drop_up'}`}>
             <div className="d-flex aux_my25 clicavel">
                 <AiOutlineCar className={`icon_p ${drop && 'apagado'}`}/>
-                <p id="legenda" class={`aux_mxl16 ${drop && 'apagado'}`} >{props.legenda}</p>
+                <p id="legenda" className={`aux_mxl16 ${drop && 'apagado'}`} >{props.legenda}</p>
                 { !drop && <AiOutlineCaretDown id="setinha" className={`mt-1 ml-2 ${drop && 'apagado'}`} /> }
                 { drop && <AiOutlineCaretUp id="setinha" className={`mt-1 ml-2 ${drop && 'apagado'}`}/>  }
             </div>

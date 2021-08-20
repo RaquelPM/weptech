@@ -8,6 +8,8 @@ import Drop from  "./drop"
 
 import { AiOutlineInfoCircle, AiOutlineClockCircle, AiOutlineTeam, AiOutlineUser, AiOutlineSetting, AiOutlineProfile, AiOutlineCheck, AiOutlineCloseCircle } from "react-icons/ai" 
 
+import { BiDollar } from 'react-icons/bi'
+
 import { FiMenu } from 'react-icons/fi'
 
 function Sidebar() {
@@ -21,18 +23,14 @@ function Sidebar() {
   return (
     <div>
       <div className="d-flex fixed-top Sidetop w-100 justify-content-center align-items-center">
-        <div className="w-25 d-flex align-items-start">
-          <FiMenu onClick={()=>setSidebar(!sidebar)} className="icon_sidetop ml-3"/>
+          <FiMenu onClick={()=>setSidebar(!sidebar)} className="icon_sidetop position-absolute left20"/>
+          <p id="title_top" className="mt-3">Weptech</p>
         </div>
-        <div className="w-75 d-flex align-items-start">
-          <p id="title_top" className="mt-2 ml-5">Weptech</p>
-        </div>
-      </div>
       { sidebar && <div onClick={()=>setSidebar(!sidebar)} className="sombra"/>}
       <div className={`Sidebar ${sidebar && 'Sidebar_show'} ${!sidebar && 'Sidebar_shadow'} h-100 d-flex align-items-center flex-column`}>
         <p id="title_side" className="aux_my80 mt-3 mr-1" >Weptech</p>
         <div className="d-flex w-100 align-items-start ml-5 flex-column">
-          <Option rota="/" icon={<AiOutlineInfoCircle className="icon_p"/>} legenda="Principal" sidebar={closeSidebar}/>
+          <Option rota="/principal" icon={<AiOutlineInfoCircle className="icon_p"/>} legenda="Principal" sidebar={closeSidebar}/>
           <div id="linha" className="aux_my40" />
           <Drop 
             top={<Option rota="/viagens/andamento" icon={<AiOutlineClockCircle className="icon_p"/>} legenda="Em andamento"/>} 
@@ -46,6 +44,7 @@ function Sidebar() {
           <Option rota="/motoristas" icon={<AiOutlineUser className="icon_p"/>} legenda="Motoristas" sidebar={closeSidebar}/>
           <Option rota="/configurações" icon={<AiOutlineSetting className="icon_p"/>} legenda="Configurações" sidebar={closeSidebar}/>
           <Option rota="/relatorios" icon={<AiOutlineProfile className="icon_p"/>} legenda="Relatórios" sidebar={closeSidebar}/>
+          <Option rota="/financeiro" icon={<BiDollar className="icon_p"/>} legenda="Financeiro" sidebar={closeSidebar}/>
         </div>
       </div>
     </div>

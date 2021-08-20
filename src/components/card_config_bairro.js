@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import { AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai'
 import check from '../media/check.svg'
 
+import '../style/Components.css'
+
 function Card_config(props){
 
     const [card, setCard] = useState(false);
@@ -11,7 +13,7 @@ function Card_config(props){
     const [horarios] = useState(props.horarios);
 
     const [nome, setNome] = useState(props.nome);
-    const [valor, setValor] = useState(props.valor);
+    const [referencia, setReferencia] = useState(props.referencia);
     const [radio, setRadio] = useState(props.tipo);
     const [horario, setHorario] = useState();
     
@@ -32,7 +34,7 @@ function Card_config(props){
             </div>
 
             <div className="d-flex flex-column align-items-center w-100">
-                <form onSubmit={(e)=>{e.preventDefault(); props.attPonto(props.ponto-1, radio, nome, valor, horarios)}} className="w90 aux_mxl24 aux_mxr24">
+                <form onSubmit={(e)=>{e.preventDefault(); props.attPonto(props.ponto-1, radio, nome, referencia, horarios)}} className="w90 aux_mxl24 aux_mxr24">
                     <div className="d-flex aux_my32 align-items-center ml-2 text_grey text_16" onChange={(e)=>setRadio(e.target.value)}>
                         <label className="radio">
                             <input type="radio" name="radio" value="dominante" className="aux_mxr24 radio"/>
@@ -47,13 +49,13 @@ function Card_config(props){
                     </div>
 
                     <div className="d-flex aux_my48 input_pontos">
-                        <div className="d-flex flex-column w-100">
+                        <div className="d-flex flex-column input_card_config_bairro">
                             <label className="text_16 text_grey mb-3 ml-2" >Rua</label>
                             <input required type="text" value={nome} maxLength="70" onChange={(e)=>{setNome(e.target.value)}} className="input_dark px-4 w-100"/>
                         </div>
-                        <div className="d-flex flex-column input_config">
-                            <label className="text_16 text_grey mb-3 ml-2" >Preço</label>
-                            <input required type="number" value={valor} min="20" onChange={(e)=>{setValor(e.target.value)}} className="input_dark px-4 w-100"/>
+                        <div className="d-flex flex-column input_card_config_bairro input_card_config_bairro_left">
+                            <label className="text_16 text_grey mb-3 ml-2" >Ponto de referência</label>
+                            <input required type="text" value={referencia} onChange={(e)=>{setReferencia(e.target.value)}} className="input_dark px-4 w-100"/>
                         </div>
                     </div>
 
