@@ -30,6 +30,14 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none !important;
 }
 
+.margin-l-auto {
+  margin-left: auto;
+}
+
+.mr-2-financeiro {
+  margin-right: 0px;
+}
+
 .border_0 {
   border: 0px;
 }
@@ -301,6 +309,10 @@ body::-webkit-scrollbar-thumb {
   .w_input_login {
     width: 432px;
   }
+
+  .mr-2-financeiro {
+    margin-right: 2rem;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -324,5 +336,9 @@ body::-webkit-scrollbar-thumb {
 
   .h90_to_50 {
     height: 20%;
+  }
+
+  .mr-2-financeiro {
+    margin-right: 10px;
   }
 }

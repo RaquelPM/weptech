@@ -17,23 +17,23 @@ function Config(){
     const [tabela, setTabela] = useState(false);
 
     const listPagos = pagos.map((pago)=>
-        <div className="d-flex text_16 my-2">
+        <div className="d-flex margin-l-auto text_16 my-2">
             <p className="mr-1 w150px  text-center">{pago.período}</p>
             <p className="mr-1 w150px text-center">{pago.motorista}</p>
             <p className="mr-1 w150px text-center ">{pago.telefone}</p>
             <p className="mr-1 w150px text-center ">{pago.valor}</p>
             <p className="mr-1 w150px text-center ">{pago.desconto}</p>
             <p className="mr-1 w150px text-center ">{pago.total}</p>
-            <div className=" mr-1 w150px ">
+            <div className="mr-3 w150px ">
                 <p className="line_0 ml-5">{pago.status}</p>
-                <button className="btn_status ml-3 mb-3 d-flex align-items-center justify-content-center transform"><FiArrowRightCircle className="icon_fina"/></button>
+                <button className="btn_status ml-2 mr-4 mb-3 d-flex align-items-center justify-content-center transform"><FiArrowRightCircle className="icon_fina"/></button>
             </div>
         </div>
     )
 
     const listApagar = apagar.map((divida)=>
-        <div className="d-flex text_16 my-2">
-            <p className="mr-1 ml-3 w150px  text-center">{divida.período}</p>
+        <div className="d-flex margin-l-auto text_16 my-2">
+            <p className="mr-1 w150px  text-center">{divida.período}</p>
             <p className="mr-1 w150px text-center">{divida.motorista}</p>
             <p className="mr-1 w150px text-center ">{divida.telefone}</p>
             <p className="mr-1 w150px text-center ">{divida.valor}</p>
@@ -56,12 +56,12 @@ function Config(){
             </div>
 
             <div className="w90 d-flex flex-column relative">
-                <div className="d-flex text_20 text_gray">
+                <div className="d-flex text_16 text_gray">
                     <button className={`px-5 py-3 border_t_10 outline_none border_0 ${!tabela && 'bg-white'} ${tabela && 'bg_gray'}`} onClick={()=>setTabela(false)}>A pagar</button>
                     <button className={`px-5 py-3 border_t_10 outline_none border_0 ${tabela && 'bg-white'} ${!tabela && 'bg_gray'}`}  onClick={()=>setTabela(true)}>Pago</button>
                 </div>
-                <div className="w-100 h500px bg-white border_b_tr_10 d-flex flex-column align-items-center pt-5 pb-3  overflow-auto scrol">
-                    <div className="d-flex text_20 text_gray">
+                <div className=" h500px bg-white border_b_tr_10 d-flex flex-column align-items-center pt-5 pb-3 scrol overflow-auto">
+                    <div className="d-flex margin-l-auto text_20 text_gray mr-2-financeiro">
                         <p className="mr-1 w150px text-center">Períodos</p>
                         <p className="mr-1 w150px text-center">Motoristas</p>
                         <p className="mr-1 w150px text-center">Telefones</p>
