@@ -1,6 +1,5 @@
-
 import Sidebar from './components/Sidebar'
-import  Principal from './pages/principal'
+import Principal from './pages/principal'
 import Motoristas from './pages/motoristas'
 import Passageiros from './pages/passageiros'
 import Relatórios from './pages/relatorios'
@@ -18,26 +17,42 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 function App() {
   return (
     <div className="w-100 h-100 d-flex">
-        <BrowserRouter>
-            <Switch>
-              <Route path="/" exact component={Login}/>
-              <Route>
-                  <Sidebar />
-                  <Route path="/principal" exact component={Principal}/>
-                  <Route path="/motoristas" exact component={Motoristas}/>
-                  <Route path="/passageiros" exact component={Passageiros}/>
-                  <Route path="/relatorios" exact component={Relatórios}/>
-                  <Route path="/viagens/andamento" exact component={Viagens_andamento}/>
-                  <Route path="/configurações" exact component={Config}/>
-                  <Route path="/configurações/bairro" exact component={Config_bairro}/>
-                  <Route path="/configurações/rotas" exact component={Config_rotas}/>
-                  <Route path="/configurações/bairro/pontos" exact component={Config_pontos}/>
-                  <Route path="/configurações/faturamento" exact component={Config_faturamento}/>
-                  <Route path="/financeiro" exact component={Financeiro}/>
-              </Route>
-            </Switch>
-        </BrowserRouter>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={Login} />
+          <Route>
+            <Sidebar />
+            <Route path="/principal" exact component={Principal} />
+            <Route path="/motoristas" exact component={Motoristas} />
+            <Route path="/passageiros" exact component={Passageiros} />
+            <Route path="/relatorios" exact component={Relatórios} />
+            <Route
+              path="/viagens/andamento"
+              exact
+              component={Viagens_andamento}
+            />
+            <Route path="/configurações" exact component={Config} />
+            <Route
+              path="/configurações/bairro"
+              exact
+              component={Config_bairro}
+            />
+            <Route path="/configurações/rotas" exact component={Config_rotas} />
+            <Route
+              path="/configurações/bairro/pontos"
+              exact
+              component={Config_pontos}
+            />
+            <Route
+              path="/configurações/faturamento"
+              exact
+              component={Config_faturamento}
+            />
+            <Route path="/financeiro" exact component={Financeiro} />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
-  );
+  )
 }
-export default App;
+export default App
