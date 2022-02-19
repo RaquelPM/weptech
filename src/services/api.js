@@ -31,7 +31,7 @@ const refreshTokenInterceptor = (api) => async (error) => {
   }
 
   try {
-    const { data } = await api.post('/auth/refresh', { refreshToken })
+    const { data } = await base.post('/auth/refresh', { refreshToken })
 
     setAuth({ ...data, isPassenger: data.accountType === 'passenger' })
 
@@ -47,7 +47,12 @@ const refreshTokenInterceptor = (api) => async (error) => {
 
 const base = axios.create({ baseURL })
 
-const admin = axios.create({ baseURL: `${baseURL}/admin` })
+const admin = axios.create({
+  baseURL: `${baseURL}/admin`,
+  headers: {
+    'X-Chevette-Key': apiKey,
+  },
+})
 
 const api = axios.create({
   baseURL: `${baseURL}/apps`,
@@ -64,9 +69,16 @@ const apiForm = axios.create({
   },
 })
 
+admin.interceptors.request.use(accessTokenInterceptor)
+
 api.interceptors.request.use(accessTokenInterceptor)
 
 apiForm.interceptors.request.use(accessTokenInterceptor)
+
+admin.interceptors.request.use(
+  (response) => response,
+  refreshTokenInterceptor(admin)
+)
 
 api.interceptors.response.use(
   (response) => response,
